@@ -36,31 +36,18 @@ const router = createBrowserRouter([
         element :  <Login/>
       }]},
       // Rotas do projeto
-       {path: "/privado",
+      {
+        path: "/privado",
         element: <MenuPrivado />,
         children: [
-      {
-        path: "clientes",
-        element: <Clientes/>,
-      },
-      {
-        path: "pedidos",
-        element: <Pedidos />,
-      },
-      {
-        path: "funcionarios",
-        element: <Funcionarios />,
-      },
-      {
-        path: "materiais",
-        element: <Materiais />,
-      },
-      {
-        path: "itenspedido",
-        element: <ItensPedido />,
-      },
-    ]
-  }
+          { index: true, element: <Home /> },
+          { path: "clientes", element: <Clientes /> },
+          { path: "pedidos", element: <Pedidos /> },
+          { path: "materiais", element: <Materiais /> },
+          { path: "itenspedido", element: <ItensPedido /> },
+          { path: "funcionarios", element: <Funcionarios /> },
+        ]
+      }
 ]);
 
 function App() {
