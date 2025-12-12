@@ -9,7 +9,7 @@ import {
 } from "../../../servicos/MateriaisServico";
 
 import Tabela from "./Tabela";
-import Formulario from "./formulario";
+import Formulario from "./Formulario";
 import { useNavigate } from "react-router-dom";
 import WithAuth from "../../../seguranca/WithAuth";
 

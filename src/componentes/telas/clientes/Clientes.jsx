@@ -7,9 +7,9 @@ import {
     cadastraClienteAPI
 } from '../../../servicos/ClientesServico';
 
-import Tabela from './tabela';
-import Formulario from './formulario';
-import Carregando from '../../comuns/carregando';
+import Tabela from './Tabela';
+import Formulario from './Formulario';
+import Carregando from '../../comuns/Carregando';
 import { useNavigate } from "react-router-dom";
 import WithAuth from "../../../seguranca/WithAuth";
 

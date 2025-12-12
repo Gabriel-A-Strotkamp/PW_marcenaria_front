@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Alerta from '../../comuns/Alerta';
-import ItemPedidoContext from './ItemPedidoContext';
+import ItemPedidoContext from './ItensPedidoContext';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';

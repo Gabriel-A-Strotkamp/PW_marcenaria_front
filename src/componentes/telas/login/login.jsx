@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { gravaAutenticacao, getToken } from '../../../seguranca/Autenticacao';
-import Carregando from '../../comuns/carregando';
+import Carregando from '../../comuns/Carregando';
 import Alerta from '../../comuns/Alerta';
 import CampoEntrada from '../../comuns/CampoEntrada';
 
 function Login() {
 
-    const [email, setEmail] = useState("");
+    const [cpf, setCpf] = useState("");
     const [senha, setSenha] = useState("");
     const [alerta, setAlerta] = useState({ status: "", message: "" });
     const [autenticado, setAutenticado] = useState(false);
@@ -19,7 +19,7 @@ function Login() {
 
         try {
             const body = {
-                email: email,
+                cpf: cpf,
                 senha: senha
             };
             setCarregando(true);
@@ -68,10 +68,10 @@ function Login() {
                         <Alerta alerta={alerta} />
                         <form onSubmit={acaoLogin}>
                             <h1 className="h3 mb-3 fw-normal">Login de usuário</h1>
-                            <CampoEntrada value={email}
-                                id="txtEmail" name="email" label="Nome"
-                                tipo="email" onchange={e => setEmail(e.target.value)}
-                                msgvalido="Email OK" msginvalido="Informe o email"
+                            <CampoEntrada value={cpf}
+                                id="txtcpf" name="cpf" label="Nome"
+                                tipo="text" onchange={e => setCpf(e.target.value)}
+                                msgvalido="cpf OK" msginvalido="Informe o cpf"
                                 requerido={true} readonly={false}
                                 maxCaracteres={40} />
                             <CampoEntrada value={senha}

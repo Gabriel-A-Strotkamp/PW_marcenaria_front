@@ -9,18 +9,19 @@ import Home from './componentes/telas/home'
 import Sobre from "./componentes/telas/sobre";
 
 // IMPORTAÇÃO DAS TELAS DO PROJETO
-import Cliente from "./componentes/telas/clientes/Cliente";
-import Pedido from "./componentes/telas/pedidos/Pedido";
-import Funcionario from "./componentes/telas/funcionarios/Funcionario";
-import Material from "./componentes/telas/materiais/Material";
-import ItemPedido from "./componentes/telas/itenspedido/ItemPedido";
+import Clientes from "./componentes/telas/clientes/Clientes";
+import Pedidos from "./componentes/telas/pedidos/Pedidos";
+import Funcionarios from "./componentes/telas/funcionarios/Funcionarios";
+import Materiais from "./componentes/telas/materiais/Materiais";
+import ItensPedido from "./componentes/telas/itensPedidos/ItensPedido";
 import MenuPublico from './componentes/MenuPublico';
 import MenuPrivado from './componentes/MenuPrivado';
+import Login from "./componentes/telas/login/login";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MeMenuPublico />,
+    element: <MenuPublico />,
     children: [
       {
         index: true,
@@ -39,24 +40,24 @@ const router = createBrowserRouter([
         element: <MenuPrivado />,
         children: [
       {
-        path: "/clientes",
-        element: <Cliente />,
+        path: "clientes",
+        element: <Clientes/>,
       },
       {
-        path: "/pedidos",
-        element: <Pedido />,
+        path: "pedidos",
+        element: <Pedidos />,
       },
       {
-        path: "/funcionarios",
-        element: <Funcionario />,
+        path: "funcionarios",
+        element: <Funcionarios />,
       },
       {
-        path: "/materiais",
-        element: <Material />,
+        path: "materiais",
+        element: <Materiais />,
       },
       {
-        path: "/itenspedido",
-        element: <ItemPedido />,
+        path: "itenspedido",
+        element: <ItensPedido />,
       },
     ]
   }

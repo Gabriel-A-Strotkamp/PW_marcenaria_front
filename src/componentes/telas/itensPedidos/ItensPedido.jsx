@@ -9,9 +9,12 @@ import {
 } from "../../../servicos/ItensPedidoServico";
 
 import Tabela from "./Tabela";
-import Formulario from "./formulario";
+import Formulario from "./Formulario";
 import { useNavigate } from "react-router-dom";
 import WithAuth from "../../../seguranca/WithAuth";
+// ADICIONE ESTA LINHA: Importando o componente Carregando
+import Carregando from '../../comuns/Carregando'; 
+
 
 function ItensPedido() {
 
