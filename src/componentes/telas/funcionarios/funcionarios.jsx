@@ -9,6 +9,7 @@ import Tabela from './Tabela';
 import Formulario from './Formulario';
 import { useNavigate } from "react-router-dom";
 import WithAuth from "../../../seguranca/WithAuth";
+import Carregando from '../../comuns/Carregando'; 
 
 function Funcionarios() {
 
